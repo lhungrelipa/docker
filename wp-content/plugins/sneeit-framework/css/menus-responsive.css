@@ -1,0 +1,102 @@
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: absolute;
+		top: -46px;
+	}
+}
+
+@keyframes SRMslideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+@-webkit-keyframes SRMslideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
+
+
+.sneeit-responsive-menu-toggle {
+	display: none;
+}
+.sneeit-responsive-menu {
+	display: none;
+	/*
+	visibility: hidden;
+	opacity: 0;
+ */
+	/*
+	transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-webkit-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-moz-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-o-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	-ms-transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+	*/	
+	
+	z-index: 9999;
+	position: absolute;
+	width: 100%;
+}
+.sneeit-responsive-menu-expanded {
+	display: block;
+	visibility:visible;
+	opacity:1;
+	/*
+	transition-delay:0s;
+	-webkit-transition-delay:0s;
+	-moz-transition-delay:0s;
+	-o-transition-delay:0s;
+	-ms-transition-delay:0s;
+	*/
+	animation-name: SRMslideDown;
+	-webkit-animation-name: SRMslideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+}
+.sneeit-responsive-menu .menu-mega-content {
+	display: none!important;
+}
+.sneeit-responsive-menu li,
+.sneeit-responsive-menu ul {
+	float: none!important;
+	width: auto!important;
+}
+.sneeit-responsive-menu .menu-item-inner,
+.sneeit-responsive-menu ul {
+	position: relative!important;
+}

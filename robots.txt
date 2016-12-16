@@ -1,0 +1,6 @@
+Sitemap: https://text.relipasoft.com/sitemap.xml
+
+# global
+User-agent: *
+Disallow: /xmlrpc.php
+
